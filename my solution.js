@@ -74,3 +74,20 @@ function check(cpf, cpfArray) {
 	p.innerHTML = message;
 	section.appendChild(p);
 }
+
+const input = document.querySelector('#cpfInput');
+input.addEventListener('focus',e => {
+	input.addEventListener('input', event => {
+		document.addEventListener('keydown',(e)=>{
+		if (e.key === 'Backspace') {
+			return;
+		}else if (event.target.value.length === 11) {
+			event.target.value += '-'
+		}else if (event.target.value.length === 7) {
+			event.target.value += '.'
+		}else if (event.target.value.length === 3) {
+			event.target.value += '.'
+		}
+		})
+	});
+});
