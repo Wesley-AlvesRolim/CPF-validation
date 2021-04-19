@@ -2,9 +2,9 @@
 <h1  align="center">Your individual registration is true?</h1>
 <br>
 <p  align="center">
-<a  href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a  href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a  href="#-credits">Credits</a>
+<a  href="#computerproject">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a  href="#rockettechnologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a  href="#ok_handcredits">Credits</a>
 </p>
 
 <br>
