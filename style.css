@@ -6,19 +6,20 @@
 	font-size: large;
 }
 
-body {
-	height: 100vh;
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
 html{
 	background-image: url('https://www.foregon.com/blog/wp-content/uploads/2020/04/segundaviacpf.jpeg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 section{
@@ -86,11 +87,11 @@ button:hover{
 
 .invalid, .valid{
 	padding: 4px;
-	border: solid 2px #e71d1d;
 	color: #e71d1d;
+	border: solid 2px #e71d1d;
 	background: #ff9292;
-	animation: forwards .8s miss;
-	-webkit-animation: forwards .8s miss;
+	animation: forwards .8s show;
+	-webkit-animation: forwards .8s show;
 }
 
 .valid{
@@ -99,7 +100,7 @@ button:hover{
 	background: #8bff8b;
 }
 
-@keyframes miss{
+@keyframes show{
 	from{
 		opacity: 0;
 		transform: scale(0);
@@ -107,7 +108,7 @@ button:hover{
 		-moz-transform: scale(0);
 		-ms-transform: scale(0);
 		-o-transform: scale(0);
-}
+	}
 	to{
 		opacity: 1;
 		transform: scale(1);
@@ -115,5 +116,66 @@ button:hover{
 		-moz-transform: scale(1);
 		-ms-transform: scale(1);
 		-o-transform: scale(1);
+	}
+}
+
+.my-profile{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+    width: 30px;
+	position: relative;
+	top: 0;
+	right: 0;
+	z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg{
+	height:30px;
+	opacity: .7;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	transition: .4s;
+	-webkit-transition: .4s;
+	-moz-transition: .4s;
+	-ms-transition: .4s;
+	-o-transition: .4s;
+}
+
+svg:hover{
+	opacity: 1;
+	animation: forwards .8s rotate;
+	-webkit-animation: forwards .8s rotate;
+	transition: .5s;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+}
+
+@keyframes rotate{
+	from{
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
 }
 }
