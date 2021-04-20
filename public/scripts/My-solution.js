@@ -10,6 +10,15 @@ body.addEventListener("submit", e => {
     check(cpf, cpfArray);
 });
 
+window.addEventListener('load', () => {
+    const linkedIn = document.querySelector('.linkedIn');
+    const github = document.querySelector('.github');
+    setTimeout(() => {
+        github.classList.remove('load')
+        linkedIn.classList.remove('load')
+    }, 500)
+});
+
 const CPF = {
     first(cpf) {
         let index = 1;

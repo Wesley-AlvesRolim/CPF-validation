@@ -52,6 +52,16 @@ document.body.addEventListener("submit", e => {
     check(cpfCheked)
 });
 
+window.addEventListener('load', () => {
+    const linkedIn = document.querySelector('.linkedIn');
+    const github = document.querySelector('.github');
+    setTimeout(() => {
+        github.classList.remove('load')
+        linkedIn.classList.remove('load')
+    }, 500)
+});
+
+
 function check(cpfCheked) {
     const section = document.querySelector('section');
     let p = document.querySelector('section > p');
