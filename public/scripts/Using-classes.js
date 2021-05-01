@@ -11,15 +11,15 @@ class ValidaCPF {
         if (this.isSequencia(cpfString)) return false;
 
         const nineFirst = this.cpf.slice(0, -2);
-        const withFirstCheckDigit = this.criaDigito(nineFirst, 1);
-        const withSecondCheckDigit = this.criaDigito(withFirstCheckDigit, 0);
+        const withFirstCheckDigit = ValidaCPF.criaDigito(nineFirst, 1);
+        const withSecondCheckDigit = ValidaCPF.criaDigito(withFirstCheckDigit, 0);
         return withSecondCheckDigit.join('') === this.cpf.join('');
     }
     isSequencia(cpfString) {
         const sequence = cpfString[0].repeat(cpfString.length);
         return sequence === this.cpf.join('');
     }
-    criaDigito(cpf, sumToWeight) {
+    static criaDigito(cpf, sumToWeight) {
         const reduce = cpf.reduce((accumulator, currentValue, index) => {
             currentValue *= index + sumToWeight;
             return accumulator + currentValue;
